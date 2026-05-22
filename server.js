@@ -38,18 +38,17 @@ app.post('/cadastro', (req, res) => {
   const email = req.body.email;
   const senha = req.body.senha;
 
-  console.log('Nome recebido:', nome);
-  console.log('Email recebido:', email);
-  console.log('Senha recebida:', senha);
+  console.log('Cadastro recebido:');
+  console.log('Nome:', nome);
+  console.log('E-mail:', email);
+  console.log('Senha:', senha);
 
   res.send(`
-    <h1>Cadastro realizado!</h1>
+    <h1>Cadastro recebido pelo servidor</h1>
     <p>Nome: ${nome}</p>
-    <p>Email: ${email}</p>
+    <p>E-mail: ${email}</p>
     <p>Senha: ${senha}</p>
     <a href="/cadastro">Voltar</a>
-    <br>
-    <a href="/">Ir para Home</a>
   `);
 });
 
