@@ -19,8 +19,18 @@ app.get('/cadastro', (req, res) => {
 });
 
 app.post('/login', (req, res) => {
-  console.log('Dados do Login:', req.body); 
-  res.send('Login recebido! Checa o terminal do VS Code.');
+  const email = req.body.email;
+  const senha = req.body.senha;
+
+  console.log('Email recebido:', email);
+  console.log('Senha recebida:', senha);
+
+  res.send(`
+    <h1>Dados recebidos pelo servidor</h1>
+    <p>Email: ${email}</p>
+    <p>Senha: ${senha}</p>
+    <a href="/login">Voltar</a>
+  `);
 });
 
 app.post('/cadastro', (req, res) => {
