@@ -34,8 +34,23 @@ app.post('/login', (req, res) => {
 });
 
 app.post('/cadastro', (req, res) => {
-  console.log('Dados do Cadastro:', req.body);
-  res.send('Cadastro recebido! Checa o terminal do VS Code.');
+  const nome = req.body.nome;
+  const email = req.body.email;
+  const senha = req.body.senha;
+
+  console.log('Nome recebido:', nome);
+  console.log('Email recebido:', email);
+  console.log('Senha recebida:', senha);
+
+  res.send(`
+    <h1>Cadastro realizado!</h1>
+    <p>Nome: ${nome}</p>
+    <p>Email: ${email}</p>
+    <p>Senha: ${senha}</p>
+    <a href="/cadastro">Voltar</a>
+    <br>
+    <a href="/">Ir para Home</a>
+  `);
 });
 
 app.listen(3000, () => {
