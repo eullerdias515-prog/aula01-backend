@@ -5,7 +5,23 @@
     <title>Cadastro</title>
 </head>
 <body>
-    <h1>Cadastro</h1>
-    <a href="/">Voltar</a>
+    <div>
+        <div>Menu</div>
+        <div>
+            <h1>Cadastro</h1>
+            <a href="/">Voltar</a>
+            <br><br>
+            <form action="/cadastro" method="POST">
+                <label>Nome:</label><br>
+                <input type="text" name="nome"><br>
+                <label>Email:</label><br>
+                <input type="email" name="email"><br>
+                <label>Senha:</label><br>
+                <input type="password" name="senha"><br><br>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+        <div>Rodapé</div>
+    </div>
 </body>
 </html>
